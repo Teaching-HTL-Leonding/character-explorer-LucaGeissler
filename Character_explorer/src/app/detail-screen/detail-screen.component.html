@@ -1,0 +1,12 @@
+<div class="container">
+  <img src="{{game.thumbnail}}">
+  
+  <h1>{{game.title}}</h1>
+
+  <p>Release Date: {{game.release_date}}</p>
+  <p>Publisher: {{game.publisher}}</p>
+  <p>Genre: {{game.genre}}</p>
+
+  <h2>Description</h2>
+  <div [innerHTML]="game.description"></div>
+</div>

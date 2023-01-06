@@ -1,0 +1,48 @@
+<h1>List of all MMORPGS avaliable for PC</h1>
+
+<div>
+  <button class="button-row-button" (click)="showAllGames()">All Games</button>
+  <button class="button-row-button" (click)="showFavouriteList()">Favourite Games</button>
+</div>
+
+<input type="text" [(ngModel)]="searchText" placeholder="Search by name">
+
+<table>
+  <tr>
+    <td></td>
+    <td>Name</td>
+    <td>Publisher</td>
+    <td>Release Date</td>
+    <ng-container *ngIf="!showFavourite">
+      <td>Favourite</td>
+    </ng-container>
+    <ng-container *ngIf="showFavourite">
+      <td>Remove Favourite</td>
+    </ng-container>
+  </tr>
+  <ng-container *ngIf="!showFavourite">
+    <tr *ngFor="let game of mmoList | searchFilter: searchText">
+
+      <td><img src="{{game.thumbnail}}" height="100"></td>
+      <td><button (click)="favouritePage(game.id)">{{game.title}}</button></td>
+      <td>{{game.publisher}}</td>
+      <td>{{game.release_date}}</td>
+      <td><input type="checkbox" (click)="setFavourite(game)" [disabled]="game.favourite" [(ngModel)]="game.favourite">
+      </td>
+    </tr>
+  </ng-container>
+
+  <ng-container *ngIf="showFavourite">
+    <tr *ngFor="let game of favouriteList.records">
+
+      <td><img src="{{game.fields.thumbnail}}" height="100"></td>
+      <td><button (click)="favouritePage(game.fields.id)">{{game.fields.title}}</button></td>
+      <td>{{game.fields.publisher}}</td>
+      <td>{{game.fields.release_date}}</td>
+      <td><button (click)="deleteFavourite(game.id,game.fields.id)">Remove</button></td>
+    </tr>
+  </ng-container>
+</table>
+
+
+<router-outlet></router-outlet>

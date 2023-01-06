@@ -1,0 +1,28 @@
+https://www.mmobomb.com/api1/games?platform=pc&category=mmorpg
+
+###
+
+https://www.mmobomb.com/api1/game?id=523
+
+
+###
+
+https://mmo-games.p.rapidapi.com/games
+X-Rapidapi-Key: 35565f91c0msh9acce1a966a370cp12d35djsn3b4e9d7629bb
+
+
+###
+
+https://mmo-games.p.rapidapi.com/game?id=1125
+X-Rapidapi-Key: 35565f91c0msh9acce1a966a370cp12d35djsn3b4e9d7629bb
+
+###
+
+https://api.airtable.com/v0/appdhZwgjJovhcXHi/Games
+Authorization: Bearer patSANl1iLlH3RZvQ.69e10188a4d7a3853e09436636c20fff3247fecca29706e5dc895d51e37825c6
+
+###
+
+
+https://api.airtable.com/v0/appdhZwgjJovhcXHi/Games
+Authorization: Bearer patSANl1iLlH3RZvQ.69e10188a4d7a3853e09436636c20fff3247fecca29706e5dc895d51e37825c6
